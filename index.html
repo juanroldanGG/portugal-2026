@@ -1,0 +1,877 @@
+<title>Portugal, octubre 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ground:#F5F7FA;
+    --surface:#FFFFFF;
+    --surface-2:#EDF1F6;
+    --ink:#131B24;
+    --ink-2:#4A5663;
+    --ink-3:#78838F;
+    --line:#D5DCE5;
+    --line-soft:#E6EBF1;
+    --blue:#1F4E79;
+    --blue-2:#3C7AB0;
+    --blue-wash:#E2ECF6;
+    --wine:#7A2233;
+    --wine-wash:#F6E7E9;
+    --ochre:#8E6318;
+    --ochre-wash:#F7EFDD;
+    --green:#2C6249;
+    --sea:#DAE8F5;
+    --land:#EFF1F4;
+    --pt-fill:#C3DCF1;
+    --oporto-bg:#DCE8F5; --oporto-ink:#1F4E79;
+    --fatima-bg:#F6E3E6; --fatima-ink:#7A2233;
+    --lisboa-bg:#F6EACB; --lisboa-ink:#7A5410;
+    --evora-bg:#E4EBD6;  --evora-ink:#4A5C24;
+    --lagos-bg:#D5EEEC;  --lagos-ink:#1C615E;
+    --madrid-bg:#E9E1F1; --madrid-ink:#55397A;
+    --obidos-bg:#F7E2D8; --obidos-ink:#8A4A2B;
+    --shadow:0 1px 2px rgba(19,27,36,.05), 0 8px 24px -16px rgba(19,27,36,.28);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0D1319;
+      --surface:#151E27;
+      --surface-2:#1D2833;
+      --ink:#E7EDF3;
+      --ink-2:#A9B6C3;
+      --ink-3:#7C8996;
+      --line:#2B3843;
+      --line-soft:#212C36;
+      --blue:#8DB9E4;
+      --blue-2:#6FA3D4;
+      --blue-wash:#16283A;
+      --wine:#E39AA6;
+      --wine-wash:#331A20;
+      --ochre:#DCB166;
+      --ochre-wash:#2D2415;
+      --green:#7BC0A0;
+      --sea:#091420;
+      --land:#26323E;
+      --pt-fill:#2C4761;
+    --oporto-bg:#1A3048; --oporto-ink:#A9CBEE;
+    --fatima-bg:#3B1D24; --fatima-ink:#EBA9B4;
+    --lisboa-bg:#3A2F16; --lisboa-ink:#E7C77E;
+    --evora-bg:#2B3319;  --evora-ink:#BCCB8E;
+    --lagos-bg:#173836;  --lagos-ink:#8FD3CD;
+    --madrid-bg:#2F2540; --madrid-ink:#C8B2E6;
+    --obidos-bg:#3A271C; --obidos-ink:#E2AE8A;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0D1319;
+    --surface:#151E27;
+    --surface-2:#1D2833;
+    --ink:#E7EDF3;
+    --ink-2:#A9B6C3;
+    --ink-3:#7C8996;
+    --line:#2B3843;
+    --line-soft:#212C36;
+    --blue:#8DB9E4;
+    --blue-2:#6FA3D4;
+    --blue-wash:#16283A;
+    --wine:#E39AA6;
+    --wine-wash:#331A20;
+    --ochre:#DCB166;
+    --ochre-wash:#2D2415;
+    --green:#7BC0A0;
+    --sea:#091420;
+    --land:#26323E;
+    --pt-fill:#2C4761;
+    --oporto-bg:#1A3048; --oporto-ink:#A9CBEE;
+    --fatima-bg:#3B1D24; --fatima-ink:#EBA9B4;
+    --lisboa-bg:#3A2F16; --lisboa-ink:#E7C77E;
+    --evora-bg:#2B3319;  --evora-ink:#BCCB8E;
+    --lagos-bg:#173836;  --lagos-ink:#8FD3CD;
+    --madrid-bg:#2F2540; --madrid-ink:#C8B2E6;
+    --obidos-bg:#3A271C; --obidos-ink:#E2AE8A;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:60rem;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem) 5rem}
+
+  /* ---------- header ---------- */
+  .masthead{padding:clamp(2.5rem,7vw,4.5rem) 0 2rem;border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--blue);font-weight:500;margin:0 0 1rem;
+  }
+  h1{
+    font-family:"Fraunces","Iowan Old Style",Georgia,serif;
+    font-weight:600;
+    font-size:clamp(2.4rem,7vw,4rem);
+    line-height:1.02;letter-spacing:-.02em;
+    margin:0 0 .9rem;text-wrap:balance;
+  }
+  h1 em{font-style:italic;color:var(--blue)}
+  .standfirst{
+    font-size:clamp(1.02rem,2.2vw,1.18rem);
+    color:var(--ink-2);max-width:44ch;margin:0 0 2rem;
+  }
+  .facts{
+    display:grid;gap:1px;background:var(--line);
+    grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));
+    border:1px solid var(--line);border-radius:2px;overflow:hidden;
+  }
+  .fact{background:var(--surface);padding:.85rem 1rem}
+  .fact dt{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--ink-3);margin:0 0 .3rem;
+  }
+  .fact dd{margin:0;font-weight:700;font-size:1.02rem;font-variant-numeric:tabular-nums}
+  .fact.anchor dd{color:var(--wine)}
+
+  /* ---------- sections ---------- */
+  section{padding-top:clamp(2.75rem,6vw,4rem)}
+  h2{
+    font-family:"Fraunces","Iowan Old Style",Georgia,serif;
+    font-weight:600;font-size:clamp(1.6rem,3.6vw,2.1rem);
+    line-height:1.15;letter-spacing:-.015em;margin:0 0 .5rem;text-wrap:balance;
+  }
+  .lede{color:var(--ink-2);max-width:62ch;margin:0 0 1.75rem}
+  p{max-width:66ch}
+  a{color:var(--blue);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--blue-2);outline-offset:3px;border-radius:2px}
+
+  .verdict{
+    background:var(--blue-wash);border-left:3px solid var(--blue);
+    padding:1.15rem 1.35rem;border-radius:0 3px 3px 0;margin:0 0 2rem;
+  }
+  .verdict p{margin:0;max-width:60ch}
+  .verdict strong{color:var(--blue)}
+
+  /* ---------- table ---------- */
+  .scroller{overflow-x:auto;border:1px solid var(--line);border-radius:3px;background:var(--surface)}
+  table{border-collapse:collapse;width:100%;min-width:44rem;font-size:.92rem}
+  th,td{text-align:left;padding:.8rem .95rem;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  thead th{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:500;background:var(--surface-2);
+    border-bottom:1px solid var(--line);
+  }
+  tbody tr:last-child td{border-bottom:0}
+  td.opt{font-weight:700;width:12.5rem}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .pick{background:var(--blue-wash)}
+  .pick td.opt{color:var(--blue)}
+  .no{color:var(--ink-3)}
+
+  /* ---------- agenda ---------- */
+  .ag{display:flex;flex-direction:column;gap:3px;margin:0 0 .9rem}
+  .ag-head,.ag-row{display:grid;grid-template-columns:4.4rem minmax(0,1fr) 2.6rem 8.6rem;gap:.5rem}
+  .ag-head{
+    font:500 .66rem "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-3);padding-bottom:.3rem;
+  }
+  .ag-head span{display:flex;align-items:center;gap:.3rem}
+  .ag-head span:nth-child(3){justify-content:center}
+  .ag-row{text-decoration:none;color:inherit;border-radius:4px}
+  .ag-row.newbase{margin-top:.5rem}
+  .ag-row:hover .ag-date b,.ag-row:focus-visible .ag-date b{color:var(--blue)}
+  .ag-date{display:flex;align-items:center;gap:.35rem;font:400 .75rem "IBM Plex Mono",ui-monospace,monospace;color:var(--ink-3)}
+  .ag-date b{font-size:.95rem;font-weight:600;color:var(--ink)}
+  .ag-day{display:flex;align-items:center;gap:.45rem;min-height:2.2rem;padding:.35rem .65rem;border-radius:4px;font-size:.9rem;line-height:1.25}
+  .ag-move{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+  .ag-car{display:flex;align-items:center;justify-content:center;border-radius:4px;color:var(--ink-2)}
+  .ag-car.on{background:var(--surface-2);border:1px solid var(--line)}
+  .ag-night{display:flex;align-items:center;gap:.4rem;padding:.35rem .65rem;border-radius:4px;font-weight:700;font-size:.88rem;color:var(--surface)}
+  .ag-ic{width:15px;height:15px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .ag-car .ag-ic,.ag-head .ag-ic{width:18px;height:18px}
+  .d-oporto{background:var(--oporto-bg);color:var(--oporto-ink)} .n-oporto{background:var(--oporto-ink)}
+  .d-fatima{background:var(--fatima-bg);color:var(--fatima-ink)} .n-fatima{background:var(--fatima-ink)}
+  .d-lisboa{background:var(--lisboa-bg);color:var(--lisboa-ink)} .n-lisboa{background:var(--lisboa-ink)}
+  .d-evora{background:var(--evora-bg);color:var(--evora-ink)} .n-evora{background:var(--evora-ink)}
+  .d-lagos{background:var(--lagos-bg);color:var(--lagos-ink)} .n-lagos{background:var(--lagos-ink)}
+  .d-madrid{background:var(--madrid-bg);color:var(--madrid-ink)} .n-madrid{background:var(--madrid-ink)}
+  .d-obidos{background:var(--obidos-bg);color:var(--obidos-ink)} .n-obidos{background:var(--obidos-ink)}
+  .n-avion{background:var(--ink-3)}
+
+  /* ---------- map ---------- */
+  .mapwrap{
+    background:var(--sea);border:1px solid var(--line);border-radius:3px;
+    overflow-x:auto;padding:.5rem;margin:0 0 1.1rem;
+  }
+  .mapwrap svg{display:block;width:100%;min-width:34rem;height:auto}
+  .sea{fill:var(--sea)}
+  .land{fill:var(--land);stroke:var(--line);stroke-width:1}
+  .pt{fill:var(--pt-fill);stroke:var(--blue);stroke-width:1.3;stroke-linejoin:round}
+  .frontera{fill:none;stroke:var(--blue);stroke-width:1.6;stroke-dasharray:7 6;opacity:.5}
+  .drive{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+  .fly{fill:none;stroke:var(--ochre);stroke-width:3.2;stroke-dasharray:12 9;stroke-linecap:round}
+  .spur{fill:none;stroke:var(--ink-3);stroke-width:2.2;stroke-dasharray:3 6;stroke-linecap:round}
+  .stop{fill:var(--blue);stroke:var(--surface);stroke-width:3}
+  .stop.anchorpin{fill:var(--wine)}
+  .ring{fill:none;stroke:var(--wine);stroke-width:1.8;opacity:.55}
+  .pass{fill:var(--surface);stroke:var(--blue);stroke-width:2.6}
+  .nights{fill:var(--surface);font:600 15px "IBM Plex Mono",ui-monospace,monospace;text-anchor:middle}
+  .lbl{fill:var(--ink);font:700 21px "Karla",system-ui,sans-serif}
+  .lbl.w{fill:var(--wine)}
+  .lbl2{fill:var(--ink-3);font:400 17px "Karla",system-ui,sans-serif}
+  .geo{
+    fill:var(--ink-3);font:500 25px "IBM Plex Mono",ui-monospace,monospace;
+    letter-spacing:.24em;opacity:.32;
+  }
+  a.pin{cursor:pointer}
+  a.pin:focus-visible{outline:2px solid var(--blue-2);outline-offset:2px}
+  .maplegend{
+    display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;align-items:center;
+    font-size:.85rem;color:var(--ink-2);margin:0 0 1.6rem;
+  }
+  .maplegend span{display:inline-flex;align-items:center;gap:.45rem}
+  .swatch{width:1.5rem;height:0;border-top-width:3px;border-top-style:solid;flex:none}
+  .sw-drive{border-color:var(--blue)}
+  .sw-fly{border-color:var(--ochre);border-top-style:dashed}
+  .sw-spur{border-color:var(--ink-3);border-top-style:dotted;border-top-width:2px}
+  .dot{width:.85rem;height:.85rem;border-radius:50%;background:var(--blue);flex:none}
+  .dot.w{background:var(--wine)}
+  .maplink{
+    display:inline-flex;align-items:center;gap:.5rem;
+    border:1px solid var(--blue);color:var(--blue);background:var(--blue-wash);
+    padding:.6rem 1rem;border-radius:3px;font-weight:700;font-size:.94rem;
+    text-decoration:none;
+  }
+  .maplink:hover{background:var(--blue);color:var(--surface)}
+
+  /* ---------- timeline ---------- */
+  .days{display:flex;flex-direction:column;gap:.4rem}
+  .day{scroll-margin-top:1.5rem}
+  .day{
+    display:grid;
+    grid-template-columns:7.25rem 1fr;
+    gap:0 1.4rem;
+    position:relative;
+  }
+  .rail{
+    position:relative;padding:1.15rem 0 1.4rem;
+    border-right:1px solid var(--line);
+  }
+  .rail::after{
+    content:"";position:absolute;right:-4.5px;top:1.55rem;
+    width:8px;height:8px;border-radius:50%;
+    background:var(--blue-2);border:2px solid var(--ground);
+  }
+  .day.fixed .rail::after{background:var(--wine);width:11px;height:11px;right:-6px;top:1.45rem}
+  .day:first-child .rail{border-top-right-radius:2px}
+  .rail .date{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.95rem;font-weight:600;font-variant-numeric:tabular-nums;
+    display:block;line-height:1.2;
+  }
+  .rail .dow{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);
+    display:block;margin-top:.15rem;
+  }
+  .rail .base{
+    display:block;margin-top:.7rem;
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--blue);font-weight:500;
+  }
+  .day.fixed .rail .base{color:var(--wine)}
+  .body{padding:1.05rem 0 1.5rem}
+  .day.fixed .body{
+    background:var(--wine-wash);margin-left:-.9rem;padding-left:.9rem;
+    padding-right:.9rem;border-radius:3px;
+  }
+  h3{
+    font-family:"Fraunces","Iowan Old Style",Georgia,serif;
+    font-size:1.22rem;font-weight:600;line-height:1.25;margin:0 0 .45rem;
+    letter-spacing:-.01em;
+  }
+  .day.fixed h3{color:var(--wine)}
+  .body p{margin:0 0 .6rem;font-size:.96rem;color:var(--ink-2);max-width:62ch}
+  .body p:last-child{margin-bottom:0}
+  .body strong{color:var(--ink);font-weight:700}
+  .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 .7rem}
+  .chip{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.66rem;letter-spacing:.05em;padding:.2rem .5rem;
+    border-radius:2px;border:1px solid var(--line);color:var(--ink-3);
+    background:var(--surface);font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  .chip.drive{border-color:var(--blue);color:var(--blue);background:var(--blue-wash)}
+  .chip.fly{border-color:var(--ochre);color:var(--ochre);background:var(--ochre-wash)}
+  .chip.lock{border-color:var(--wine);color:var(--wine);background:var(--surface);font-weight:600}
+  .swap{
+    border-left:2px solid var(--line);padding:.15rem 0 .15rem .8rem;
+    margin:.7rem 0 0;font-size:.89rem;color:var(--ink-3);max-width:60ch;
+  }
+  .swap b{color:var(--ink-2);font-weight:700}
+
+  .extra{margin:.8rem 0 0;padding:.6rem .85rem .55rem;border:1px dashed var(--line);border-radius:3px;max-width:62ch}
+  .extra-label{display:block;font:500 .64rem "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .3rem}
+  .extra ul{margin:0;padding-left:1.1rem;color:var(--ink-2);font-size:.9rem}
+  .extra li{margin:.2rem 0}
+  .extra + .swap{margin-top:.8rem}
+
+  /* ---------- booking list ---------- */
+  .book{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+  .item{
+    background:var(--surface);padding:.9rem 1.1rem;
+    display:grid;grid-template-columns:5.5rem 1fr;gap:.25rem 1rem;align-items:baseline;
+  }
+  .pri{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;
+  }
+  .pri.p0{color:var(--green)}
+  .pri.p1{color:var(--wine)}
+  .pri.p2{color:var(--ochre)}
+  .pri.p3{color:var(--ink-3)}
+  .item .what{font-weight:700;font-size:.98rem}
+  .item .why{grid-column:2;color:var(--ink-2);font-size:.89rem}
+
+  /* ---------- notes ---------- */
+  .notes{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}
+  .note h4{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--blue);margin:0 0 .4rem;font-weight:600;
+  }
+  .note p{margin:0;font-size:.92rem;color:var(--ink-2)}
+
+  /* ---------- budget ---------- */
+  .budget{width:100%;border-collapse:collapse;min-width:0}
+  .budget td{border-bottom:1px solid var(--line-soft);padding:.6rem .2rem;font-size:.94rem}
+  .budget td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:500}
+  .budget tr:last-child td{border-bottom:0;border-top:1.5px solid var(--ink);font-weight:700;font-size:1.02rem;padding-top:.75rem}
+  .caveat{font-size:.85rem;color:var(--ink-3);margin-top:.8rem;font-style:italic}
+
+  details{border-top:1px solid var(--line);padding:.9rem 0}
+  summary{cursor:pointer;font-weight:700;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"+ ";color:var(--blue);font-family:"IBM Plex Mono",monospace}
+  details[open] summary::before{content:"– "}
+  details p{margin:.6rem 0 0;font-size:.93rem;color:var(--ink-2)}
+
+  footer{margin-top:3.5rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:.84rem;color:var(--ink-3)}
+
+  @media (max-width:36rem){
+    .day{grid-template-columns:1fr;gap:0}
+    .rail{
+      border-right:0;border-bottom:1px solid var(--line);
+      padding:1.1rem 0 .5rem;display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;
+    }
+    .rail::after{display:none}
+    .rail .base{margin-top:0;margin-left:auto}
+    .body{padding-top:.8rem}
+    .day.fixed .body{margin-left:0;padding-left:.9rem}
+    .item{grid-template-columns:1fr}
+    .item .why{grid-column:1}
+    td.opt{width:auto}
+    .ag-head,.ag-row{grid-template-columns:3rem minmax(0,1fr) 1.9rem 5.7rem;gap:.35rem}
+    .ag-date{flex-direction:column;align-items:flex-start;justify-content:center;gap:0;line-height:1.1}
+    .ag-day{font-size:.82rem;padding:.3rem .5rem}
+    .ag-night{font-size:.78rem;padding:.3rem .45rem;gap:.3rem}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">Plan del viaje · 15 noches · Medellín ida y vuelta por Madrid</p>
+  <h1>Portugal,<br><em>octubre 2026</em></h1>
+  <p class="standfirst">De Oporto al Algarve en un solo carro, con el 13 de octubre en Fátima como el clavo del que cuelga todo lo demás.</p>
+  <dl class="facts">
+    <div class="fact"><dt>Llegada a Madrid</dt><dd>10 oct · 15:20</dd></div>
+    <div class="fact"><dt>Regreso</dt><dd>25 oct · 15:25</dd></div>
+    <div class="fact"><dt>Noches</dt><dd>15</dd></div>
+    <div class="fact anchor"><dt>Fecha fija</dt><dd>13 oct, Fátima</dd></div>
+  </dl>
+</header>
+
+<section>
+  <h2>Las quince noches, día a día</h2>
+  <p class="lede">Una fila por fecha: dónde pasan el día, si ese día manejan, y dónde duermen esa noche. El carro lo tienen del 10 en la noche al 22 en la mañana. Toquen una fila para ir al detalle de ese día.</p>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 18l6-6M13 6l6 6"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0H9m-6-6h15m-6 0V6"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7H9l2-7H7l-2 2H2l2-4-2-4h3l2 2h4L9 3h3z"/></symbol>
+  </svg>
+  <div class="ag">
+    <div class="ag-head"><span>Fecha</span><span><svg class="ag-ic"><use href="#i-sun"></use></svg>De día</span><span title="Carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span><svg class="ag-ic"><use href="#i-moon"></use></svg>De noche</span></div>
+    <a class="ag-row" href="#d10"><span class="ag-date"><b>10</b>sáb</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-plane"></use></svg><span>Madrid → Oporto 19:05 · recogen el carro 20:30</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-oporto"><svg class="ag-ic"><use href="#i-moon"></use></svg>Oporto</span></a>
+    <a class="ag-row" href="#d11"><span class="ag-date"><b>11</b>dom</span><span class="ag-day d-oporto"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Oporto: São Bento · Livraria Lello 13:00 · Ribeira</span></span><span class="ag-car"></span><span class="ag-night n-oporto"><svg class="ag-ic"><use href="#i-moon"></use></svg>Oporto</span></a>
+    <a class="ag-row newbase" href="#d12"><span class="ag-date"><b>12</b>lun</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-arrow"></use></svg><span>Tour a pie 11:00 → Fátima · velas 21:30</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-fatima"><svg class="ag-ic"><use href="#i-moon"></use></svg>Fátima</span></a>
+    <a class="ag-row newbase" href="#d13"><span class="ag-date"><b>13</b>mar</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-arrow"></use></svg><span>Fátima: misa 10:00 → Óbidos</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-obidos"><svg class="ag-ic"><use href="#i-moon"></use></svg>Óbidos</span></a>
+    <a class="ag-row newbase" href="#d14"><span class="ag-date"><b>14</b>mié</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-arrow"></use></svg><span>Mañana en Óbidos → Lisboa · carro al parqueadero</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-lisboa"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lisboa</span></a>
+    <a class="ag-row" href="#d15"><span class="ag-date"><b>15</b>jue</span><span class="ag-day d-lisboa"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Lisboa: Alfama y el castillo · fado 21:30</span></span><span class="ag-car"></span><span class="ag-night n-lisboa"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lisboa</span></a>
+    <a class="ag-row" href="#d16"><span class="ag-date"><b>16</b>vie</span><span class="ag-day d-lisboa"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Sintra: Pena y Regaleira, en carro</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-lisboa"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lisboa</span></a>
+    <a class="ag-row" href="#d17"><span class="ag-date"><b>17</b>sáb</span><span class="ag-day d-lisboa"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Lisboa: Belém · Baixa y Chiado</span></span><span class="ag-car"></span><span class="ag-night n-lisboa"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lisboa</span></a>
+    <a class="ag-row newbase" href="#d18"><span class="ag-date"><b>18</b>dom</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-arrow"></use></svg><span>Lisboa → Évora</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-evora"><svg class="ag-ic"><use href="#i-moon"></use></svg>Évora</span></a>
+    <a class="ag-row newbase" href="#d19"><span class="ag-date"><b>19</b>lun</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-arrow"></use></svg><span>Évora → Lagos · Ponta da Piedade</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-lagos"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lagos</span></a>
+    <a class="ag-row" href="#d20"><span class="ag-date"><b>20</b>mar</span><span class="ag-day d-lagos"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Benagil en barco</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-lagos"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lagos</span></a>
+    <a class="ag-row" href="#d21"><span class="ag-date"><b>21</b>mié</span><span class="ag-day d-lagos"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Sagres · Cabo de São Vicente</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-lagos"><svg class="ag-ic"><use href="#i-moon"></use></svg>Lagos</span></a>
+    <a class="ag-row newbase" href="#d22"><span class="ag-date"><b>22</b>jue</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-plane"></use></svg><span>Lagos → Faro · FR220 12:50 → Madrid 15:10</span></span><span class="ag-car on" title="Con carro"><svg class="ag-ic"><use href="#i-car"></use></svg></span><span class="ag-night n-madrid"><svg class="ag-ic"><use href="#i-moon"></use></svg>Madrid</span></a>
+    <a class="ag-row" href="#d23"><span class="ag-date"><b>23</b>vie</span><span class="ag-day d-madrid"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Madrid: Prado y Retiro</span></span><span class="ag-car"></span><span class="ag-night n-madrid"><svg class="ag-ic"><use href="#i-moon"></use></svg>Madrid</span></a>
+    <a class="ag-row" href="#d24"><span class="ag-date"><b>24</b>sáb</span><span class="ag-day d-madrid"><svg class="ag-ic"><use href="#i-sun"></use></svg><span>Madrid sin plan, o Toledo en tren</span></span><span class="ag-car"></span><span class="ag-night n-madrid"><svg class="ag-ic"><use href="#i-moon"></use></svg>Madrid</span></a>
+    <a class="ag-row newbase" href="#d25"><span class="ag-date"><b>25</b>dom</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-plane"></use></svg><span>Madrid → vuelo de regreso 15:25</span></span><span class="ag-car"></span><span class="ag-night n-avion"><svg class="ag-ic"><use href="#i-plane"></use></svg>En el avión</span></a>
+  </div>
+  <p class="caveat">Oporto 2 noches, Fátima 1, Óbidos 1, Lisboa 4, Évora 1, Lagos 3 y Madrid 3. Las filas con flecha o avión son días de traslado; el ícono del carro marca los días que manejan. Aquí va solo lo principal de cada día; lo opcional está en el detalle.</p>
+</section>
+
+<section>
+  <h2>El mapa de la ruta</h2>
+  <p class="lede">A escala real. El tamaño de cada punto es el número de noches; toquen un punto para saltar a ese día.</p>
+
+  <div class="mapwrap">
+    <svg viewBox="0 0 840 850" role="img" aria-label="Mapa de la ruta: vuelo de Madrid a Oporto, recorrido en carro de Oporto a Faro por Coimbra, Fátima, Nazaré, Óbidos, Lisboa, Évora y Lagos, y vuelo de Faro de regreso a Madrid.">
+      <rect class="sea" x="0" y="0" width="840" height="850"></rect>
+
+      <path class="land" d="M 114.9,69.5 L 126.5,143 L 136.9,177.5 L 140.4,200 L 128.8,254 L 114.9,327.5 L 90.4,410 L 55.6,447.5 L 50.9,506 L 41.6,533 L 50.9,546.5 L 71.8,545 L 75.3,587 L 114.9,657.5 L 123,710 L 100.9,797 L 138.1,785 L 154.4,783.5 L 186.9,788 L 224.1,804.5 L 338.1,777.5 L 414.8,870 L 900,880 L 900,30 L 192.8,50 Z"></path>
+
+      <path class="pt" d="M 114.9,69.5 L 126.5,143 L 136.9,177.5 L 140.4,200 L 128.8,254 L 114.9,327.5 L 90.4,410 L 55.6,447.5 L 50.9,506 L 41.6,533 L 50.9,546.5 L 71.8,545 L 75.3,587 L 114.9,657.5 L 123,710 L 100.9,797 L 138.1,785 L 154.4,783.5 L 186.9,788 L 224.1,804.5 L 284.6,771.5 L 274.1,717.5 L 291.6,620 L 320.6,582.5 L 332.2,470 L 285.7,398 L 349.7,350 L 355.5,260 L 355.5,200 L 384.6,117.5 L 361.3,72.5 L 262.5,57.5 L 192.8,50 Z"></path>
+
+      <path class="frontera" d="M 284.6,771.5 L 274.1,717.5 L 291.6,620 L 320.6,582.5 L 332.2,470 L 285.7,398 L 349.7,350 L 355.5,260 L 355.5,200 L 384.6,117.5 L 361.3,72.5"></path>
+
+      <text class="geo" x="252" y="300">PORTUGAL</text>
+      <text class="geo" x="540" y="175">ESPAÑA</text>
+      <text class="geo" x="58" y="700" transform="rotate(-90 58 700)" style="font-size:20px">OCÉANO ATLÁNTICO</text>
+
+      <!-- vuelos -->
+      <path class="fly" d="M 715.4,287.5 Q 430,108 142.9,176.3"></path>
+      <path class="fly" d="M 224.1,797.1 Q 556,672 715.4,287.5"></path>
+
+      <!-- carretera -->
+      <path class="drive" d="M 142.9,176.3 L 168.3,319.5 L 138,405.2"></path>
+      <path class="drive" d="M 138,405.2 L 91.6,409.8 L 81.4,445.9 L 83.6,541.7"></path>
+      <path class="drive" d="M 83.6,541.7 L 226.1,564.3 L 137.6,784.6 L 224.1,797.1"></path>
+
+      <!-- excursiones de un día -->
+      <path class="spur" d="M 83.6,541.7 L 54.3,530.3"></path>
+      <path class="spur" d="M 137.6,784.6 L 106.1,798.7"></path>
+      <path class="spur" d="M 137.6,784.6 L 166.5,786.9"></path>
+
+      <!-- paradas de paso -->
+      <circle class="pass" cx="168.3" cy="319.5" r="5.5"></circle>
+      <circle class="pass" cx="91.6" cy="409.8" r="5.5"></circle>
+      
+      <circle class="pass" cx="54.3" cy="530.3" r="5.5"></circle>
+      <circle class="pass" cx="106.1" cy="798.7" r="5.5"></circle>
+      <circle class="pass" cx="166.5" cy="786.9" r="5.5"></circle>
+      <circle class="pass" cx="224.1" cy="797.1" r="5.5"></circle>
+
+      <text class="lbl2" x="181" y="325">Coimbra</text>
+      <text class="lbl2" x="80" y="398" text-anchor="end">Nazaré</text>
+      <a class="pin" href="#d13"><circle class="stop" cx="81.4" cy="445.9" r="10"></circle><text class="nights" x="81.4" y="451.2">1</text><text class="lbl" x="66" y="452" text-anchor="end">Óbidos</text></a>
+      <text class="lbl2" x="66" y="512" text-anchor="end">Sintra · Cascais</text>
+      <text class="lbl2" x="100" y="826" text-anchor="end">Sagres</text>
+      <text class="lbl2" x="176" y="772">Benagil</text>
+      <text class="lbl2" x="237" y="803">Faro</text>
+
+      <!-- noches -->
+      <a class="pin" href="#d10"><circle class="stop" cx="142.9" cy="176.3" r="11.5"></circle><text class="nights" x="142.9" y="181.5">2</text><text class="lbl" x="161" y="182">Oporto</text></a>
+      <a class="pin" href="#d12"><circle class="ring" cx="138" cy="405.2" r="16"></circle><circle class="stop anchorpin" cx="138" cy="405.2" r="11"></circle><text class="nights" x="138" y="410.5">1</text><text class="lbl w" x="162" y="411">Fátima</text></a>
+      <a class="pin" href="#d14"><circle class="stop" cx="83.6" cy="541.7" r="14.5"></circle><text class="nights" x="83.6" y="547">4</text><text class="lbl" x="104" y="547">Lisboa</text></a>
+      <a class="pin" href="#d18"><circle class="stop" cx="226.1" cy="564.3" r="10"></circle><text class="nights" x="226.1" y="569.5">1</text><text class="lbl" x="243" y="570">Évora</text></a>
+      <a class="pin" href="#d19"><circle class="stop" cx="137.6" cy="784.6" r="13"></circle><text class="nights" x="137.6" y="789.8">3</text><text class="lbl" x="137.6" y="760" text-anchor="middle">Lagos</text></a>
+      <a class="pin" href="#d22"><circle class="stop" cx="715.4" cy="287.5" r="13"></circle><text class="nights" x="715.4" y="292.7">3</text><text class="lbl" x="734" y="294">Madrid</text></a>
+    </svg>
+  </div>
+
+  <div class="maplegend">
+    <span><i class="swatch sw-fly"></i>Vuelo</span>
+    <span><i class="swatch sw-drive"></i>Carro alquilado</span>
+    <span><i class="swatch sw-spur"></i>Excursión de un día</span>
+    <span><i class="dot"></i>Noches ahí</span>
+    <span><i class="dot w"></i>Fecha fija</span>
+  </div>
+
+  <p><a class="maplink" href="https://www.google.com/maps/dir/Porto,+Portugal/Coimbra,+Portugal/F%C3%A1tima,+Portugal/Nazar%C3%A9,+Portugal/%C3%93bidos,+Portugal/Lisboa,+Portugal/%C3%89vora,+Portugal/Lagos,+Portugal/Faro,+Portugal" target="_blank" rel="noopener">Abrir la ruta terrestre en Google Maps →</a></p>
+
+  <p class="swap" style="margin-top:1.5rem">Ese enlace abre Google Maps con las nueve paradas del recorrido en carro ya cargadas, en orden. Desde ahí pueden guardarla, mandársela al celular o calcular tiempos con tráfico real.</p>
+
+  <h3 style="font-size:1.1rem;margin:2rem 0 .75rem">Cada tramo, con su distancia</h3>
+  <div class="scroller">
+    <table>
+      <thead>
+        <tr><th>Día</th><th>Tramo</th><th>Cómo</th><th>Distancia</th><th>Al volante</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">10 oct</td><td>Madrid → Oporto, recogen el carro 20:30</td><td>Vuelo + carro</td><td class="num">20 km</td><td class="num">1 h 15 de vuelo + 25 min</td></tr>
+        <tr><td class="num">12 oct</td><td>Oporto → Fátima</td><td>Carro</td><td class="num">190 km</td><td class="num">2 h</td></tr>
+        <tr><td class="num">13 oct</td><td>Fátima → Óbidos <span class="pend">(2 h 40 si paran en Coimbra)</span></td><td>Carro</td><td class="num">110 km</td><td class="num">1 h 15</td></tr>
+        <tr><td class="num">14 oct</td><td>Óbidos → Lisboa, carro al parqueadero Camões</td><td>Carro</td><td class="num">85 km</td><td class="num">1 h</td></tr>
+        <tr><td class="num">16 oct</td><td>Lisboa → Sintra → Lisboa <span class="pend">(+ Cabo da Roca y Cascais si quieren)</span></td><td>Carro</td><td class="num">60 km</td><td class="num">35 min por trayecto</td></tr>
+        <tr><td class="num">18 oct</td><td>Lisboa → Évora, sacan el carro de Camões</td><td>Carro</td><td class="num">135 km</td><td class="num">1 h 30</td></tr>
+        <tr><td class="num">19 oct</td><td>Évora → Lagos</td><td>Carro</td><td class="num">250 km</td><td class="num">2 h 45</td></tr>
+        <tr><td class="num">20–21 oct</td><td>Lagos → Benagil y Sagres</td><td>Carro</td><td class="num">120 km</td><td class="num">2 h en total</td></tr>
+        <tr><td class="num">22 oct</td><td>Lagos → Faro (devuelven 10:00) → Madrid</td><td>Carro + vuelo</td><td class="num">90 km</td><td class="num">1 h + 1 h 20 de vuelo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caveat">Unos 1.050 km al volante en doce días, sin contar las paradas opcionales, y el día más largo no llega a tres horas.</p>
+</section>
+
+<section>
+  <h2>El itinerario, día por día</h2>
+  <p class="lede">Norte a sur, sin devolverse. Los dos días en rojo son los únicos que no se pueden mover. Cada día trae primero lo principal; lo del recuadro punteado es opcional, para si les da el tiempo y las ganas.</p>
+
+  <div class="days">
+
+    <article class="day" id="d10">
+      <div class="rail"><span class="date">10 oct</span><span class="dow">Sábado</span><span class="base">Oporto</span></div>
+      <div class="body">
+        <h3>Aterrizar en Madrid y seguir a Oporto esa misma noche</h3>
+        <div class="chips"><span class="chip">AV16 · llega 15:20</span><span class="chip fly">UX1141 · 19:05 → Oporto 19:20 · 7ZRZSS</span><span class="chip">Carro Dollar 20:30 · 757793603</span><span class="chip">Portugal va 1 h atrás</span></div>
+        <p><strong>Aterrizan a las 15:20 y a las 19:05 sale el Air Europa a Oporto.</strong> Son 3 h 45 de margen. Como Portugal va una hora atrás, el vuelo aterriza a las 19:20 hora local: Recogen el carro a las <strong>20:30</strong> en el mostrador de <strong>Hertz</strong> del aeropuerto (reserva Dollar 757793603) y en 25 minutos están en el hotel.</p>
+        <p><strong>Para el mostrador:</strong> el voucher, pasaporte, licencia y la <strong>tarjeta de crédito a nombre del conductor principal</strong>, con chip y clave, para el depósito de €900. Ahí pagan €218,57 (devolución en Faro + tarjeta de peajes). Revisen el carro y tómenle fotos antes de salir.</p>
+        <p><strong>Dos cosas que los pueden enredar.</strong> Es tiquete aparte: recogen maletas, salen y vuelven a hacer check-in, y el mostrador de equipaje suele cerrar 45 minutos antes de la salida, o sea a las 18:20. Y el control biométrico nuevo de la UE tiene lentas las filas de inmigración.</p>
+        <p><strong>Lo bueno de Air Europa es la terminal.</strong> Avianca llega a la T1 y Air Europa sale de la T2 —confírmenlo igual en el pase de abordar—, y la T1, la T2 y la T3 son el mismo edificio: se pasa caminando. La T4 es la única que queda aparte y obliga a tomar un bus.</p>
+        <p class="swap"><b>Si el AV16 se atrasa más de dos horas:</b> no corran. Duermen en un hotel del aeropuerto y salen en el primer vuelo del 11. Pierden la mañana de Oporto, no el viaje.</p>
+      </div>
+    </article>
+
+    <article class="day" id="d11">
+      <div class="rail"><span class="date">11 oct</span><span class="dow">Domingo</span><span class="base">Oporto</span></div>
+      <div class="body">
+        <h3>Oporto a pie, sin reloj</h3>
+        <div class="chips"><span class="chip">Metro línea E · 35 min · €2,60</span><span class="chip lock">Livraria Lello · 13:00 · ref. 107151032</span><span class="chip">Cambiar placa en Telpark</span></div>
+        <p><strong>Lo principal.</strong> En la mañana, la Sé y la Estação de São Bento con sus azulejos, que quedan a cinco minutos una de la otra. <strong>A la 1:00 de la tarde, la Livraria Lello</strong>, con la entrada que ya tienen. Al final del día, la Ribeira y cruzar el Ponte Luís I por el nivel de arriba para ver el atardecer desde Gaia.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>La Torre dos Clérigos, que queda al lado de la Lello</li>
+          <li>El Mercado do Bolhão y la Rua de Santa Catarina, con un café en el Majestic</li>
+          <li>El Palácio da Bolsa, con visita guiada</li>
+          <li>Una cata de vino de Oporto del lado de Gaia: Graham's, Taylor's o Cálem</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day fixed" id="d12">
+      <div class="rail"><span class="date">12 oct</span><span class="dow">Lunes</span><span class="base">Fátima</span></div>
+      <div class="body">
+        <h3>El tour a pie de la mañana, y la Procesión de las Velas</h3>
+        <div class="chips"><span class="chip lock">Fecha fija</span><span class="chip lock">Sandeman · 11:00</span><span class="chip drive">Carro · 190 km · 2 h</span><span class="chip">Entrar a Fátima antes de las 17:00</span></div>
+        <p><strong>Lo principal.</strong> Hagan el check-out temprano y dejen las maletas en la recepción. <strong>A las 11:00, el free walking tour que les recomendaron:</strong> Sandeman, dos horas, en español, con punto de encuentro en la estatua del obispo António Ferreira Gomes frente a la Torre dos Clérigos (sombrillas rojas). Termina a la 1:00.</p>
+        <p><strong>De ahí, derecho a Fátima.</strong> Almuerzo rápido, recojan el carro y salgan a más tardar a las 2:00. Son dos horas de autopista y llegan hacia las 4:00 de la tarde, con margen de sobra antes del tope de las 5:00.</p>
+        <p><strong>Sobre el tráfico, que sí importa ese día.</strong> El 12 y el 13 llegan cientos de miles de peregrinos y las vías de entrada a Fátima se congestionan desde media tarde; parte del recinto y sus alrededores se cierran al carro. Apunten a estar dentro del pueblo <strong>antes de las 17:00</strong>, dejen el carro en el hotel y no lo vuelvan a tocar hasta el 13 en la tarde. Todo lo del santuario se hace caminando.</p>
+        <p><strong>21:30: bendición de las velas y rosario en la Capelinha das Aparições, y enseguida la Procissão das Velas.</strong> Es el corazón de la peregrinación de octubre y, para la mayoría de la gente, lo más impresionante de los dos días.</p>
+      </div>
+    </article>
+
+    <article class="day fixed" id="d13">
+      <div class="rail"><span class="date">13 oct</span><span class="dow">Martes</span><span class="base">Óbidos</span></div>
+      <div class="body">
+        <h3>El aniversario del Milagro del Sol, y salida hacia Óbidos</h3>
+        <div class="chips"><span class="chip lock">Fecha fija</span><span class="chip">Estar en el recinto antes de 8:30</span><span class="chip drive">Carro · 110 km · 1 h 15</span></div>
+        <p><strong>9:30</strong> rosario en la Capelinha. <strong>10:00</strong> procesión al altar, Misa internacional, bendición de los enfermos y la Procissão do Adeus con los pañuelos blancos. Termina cerca de las 12:30. Vayan temprano, vayan a pie y cuenten con muchas horas de pie a la intemperie.</p>
+        <p><strong>Almuercen en Fátima y salgan después de las 2:00.</strong> A esa hora la multitud ya se despejó y las vías vuelven a moverse. En una hora y cuarto están en Óbidos, con la tarde entera para caminar la muralla y ver el pueblo cuando ya se fueron los buses de turistas.</p>
+        <p><strong>Se hospedan en Lovin Book Guesthouse</strong>, sobre la Rua Direita, a 50 metros de la Porta da Vila. Es self check-in: la mañana del 13 les escriben por correo o WhatsApp con el código de la puerta y las indicaciones para parquear. Revisen el teléfono antes de salir de Fátima, por si ya llegó el mensaje.</p>
+        <div class="extra"><span class="extra-label">Coimbra, si el cuerpo da — se decide ese mismo día</span><ul>
+          <li>Coimbra queda a una hora de Fátima, en dirección contraria a Óbidos. Si al salir de la misa se sienten con energía, caben la Universidad y la Biblioteca Joanina, y de ahí una hora y cuarenta hasta Óbidos, llegando hacia las 7:30 de la noche</li>
+          <li>Son 2 h 40 al volante ese día, contra 1 h 15 yendo directo. Ahí está toda la diferencia</li>
+          <li>La entrada de la Joanina es con hora fija: cómprenla de todas formas, que es barata, y si ese día están cansados se pierde poco</li>
+          <li>El Mosteiro da Batalha es el punto intermedio: queda a 15 minutos de Fátima y casi de camino a Óbidos. Media hora de parada y siguen</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d14">
+      <div class="rail"><span class="date">14 oct</span><span class="dow">Miércoles</span><span class="base">Lisboa</span></div>
+      <div class="body">
+        <h3>La mañana en Óbidos y llegada a Lisboa</h3>
+        <div class="chips"><span class="chip drive">Carro · 85 km · 1 h</span><span class="chip lock">Parqueadero Camões · T100660853</span></div>
+        <p><strong>Lo principal.</strong> Desayuno dentro de la muralla y la mañana en Óbidos con el pueblo casi vacío: los buses de turistas empiezan a llegar hacia las 11. Den la vuelta por encima de la muralla y tomen la ginjinha en vasito de chocolate.</p>
+        <p>Salgan después del almuerzo y en una hora están en Lisboa. Dejen a María y las maletas en el hotel y lleven el carro al <strong>parqueadero Camões</strong> (6 min caminando de vuelta). Instrucciones y código en la sección del parqueadero. Les queda media tarde libre para empezar a caminar la ciudad sin plan.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>Nazaré, a 45 minutos al norte de Óbidos (suma hora y media entre ida y vuelta): el mirador do Suberco en el Sítio y la Praia do Norte, la de las olas gigantes, cuya temporada arranca justo en octubre</li>
+          <li>Caldas da Rainha, a 10 minutos, con su mercado de frutas en la plaza</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d15">
+      <div class="rail"><span class="date">15 oct</span><span class="dow">Jueves</span><span class="base">Lisboa</span></div>
+      <div class="body">
+        <h3>Alfama y el castillo, con fado en la noche</h3>
+        <div class="chips"><span class="chip lock">Mesa de Frades · 21:30</span></div>
+        <p><strong>Lo principal.</strong> Alfama a pie, perdiéndose por las escaleras, y el Castelo de São Jorge (entrada con hora) con la vista sobre toda la ciudad. Al final de la tarde, el atardecer desde el Miradouro das Portas do Sol o Santa Luzia, hacia las 7.</p>
+        <p><strong>21:30, Mesa de Frades: cena con fado y bebidas.</strong> Ya está reservada y pagada para dos, en la Rua dos Remédios 139. La cena y el show se alargan: cuenten salir hacia las 23:30 o las 00:00, y vuelvan al Chiado en taxi o Uber.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>La Sé, la catedral, de camino al castillo</li>
+          <li>Los miradouros das Portas do Sol y Santa Luzia, en la misma subida</li>
+          <li>El tranvía 28: súbanse en Martim Moniz a primera hora o no van a caber</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d16">
+      <div class="rail"><span class="date">16 oct</span><span class="dow">Viernes</span><span class="base">Lisboa</span></div>
+      <div class="body">
+        <h3>Sintra, sin correr</h3>
+        <div class="chips"><span class="chip">Viernes a propósito</span><span class="chip lock">Pena: entrada con hora</span><span class="chip drive">Carro · 35 min</span></div>
+        <p><strong>Lo principal.</strong> Viernes y no sábado, porque Sintra en fin de semana es una fila. <strong>El Palácio da Pena con entrada de hora fija comprada con semanas de anticipación</strong>, a la primera hora, y después la Quinta da Regaleira y su pozo iniciático. Almuercen en el pueblo y vuelvan a Lisboa sin prisa. Arriba, en la Pena, casi no hay dónde parquear: dejen el carro en un parqueadero del centro de Sintra y suban en el bus 434.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>El Cabo da Roca, el punto más occidental de Europa continental</li>
+          <li>Cenar en Cascais, frente al mar</li>
+          <li>Con el carro es fácil: de Sintra al Cabo da Roca son 25 min, y de ahí a Cascais otros 20. Vuelven a Lisboa por la costa</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d17">
+      <div class="rail"><span class="date">17 oct</span><span class="dow">Sábado</span><span class="base">Lisboa</span></div>
+      <div class="body">
+        <h3>Belém en la mañana, la Baixa en la tarde</h3>
+        <p><strong>Lo principal.</strong> El Mosteiro dos Jerónimos (entrada online), la Torre de Belém y los Pastéis de Belém —entren al salón en vez de hacer la fila de la ventanilla, que es mucho más rápido—. En la tarde, de vuelta al centro: bajen por la Baixa hasta la Praça do Comércio, suban al Chiado y tómense algo en A Brasileira.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>El Padrão dos Descobrimentos y el MAAT, a la orilla del río</li>
+          <li>El Elevador de Santa Justa y las ruinas del Convento do Carmo</li>
+          <li>LX Factory o el Time Out Market</li>
+          <li>El atardecer en el Miradouro de Santa Catarina</li>
+        </ul></div>
+        <p class="swap"><b>Es el último día en Lisboa:</b> dejen la maleta lista. Mañana sacan el carro de Camões antes de la 1:00 p. m.</p>
+      </div>
+    </article>
+
+    <article class="day" id="d18">
+      <div class="rail"><span class="date">18 oct</span><span class="dow">Domingo</span><span class="base">Évora</span></div>
+      <div class="body">
+        <h3>Lisboa → Évora, con la tarde en la ciudad</h3>
+        <div class="chips"><span class="chip drive">Carro · 135 km · 1 h 30</span></div>
+        <p>En la mañana, uno de los dos saca el carro del parqueadero Camões (sin costo hasta la 1:00 p. m.) y recoge a la otra persona con las maletas en la puerta del hotel.</p>
+        <p><strong>Lo principal.</strong> Évora es pequeña y se camina toda: el Templo Romano, la Catedral y la Praça do Giraldo para almorzar. El Alentejo es donde mejor se come en Portugal y casi nadie lo sabe.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>La Capela dos Ossos, forrada de huesos</li>
+          <li>Subir al techo de la Catedral, con la vista sobre el Alentejo</li>
+          <li>Monsaraz al atardecer, a 50 minutos, si llegan temprano</li>
+          <li>Mañana del 19, antes de salir hacia Lagos, una cata en la bodega Cartuxa, en la misma Évora (reserven y confirmen horario)</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d19">
+      <div class="rail"><span class="date">19 oct</span><span class="dow">Lunes</span><span class="base">Lagos</span></div>
+      <div class="body">
+        <h3>Bajar al Algarve</h3>
+        <div class="chips"><span class="chip drive">Carro · 250 km · 2 h 45</span></div>
+        <p><strong>Lo principal.</strong> Lleguen a Lagos, dejen las maletas y vayan al <strong>atardecer en Ponta da Piedade</strong>: bajen las escaleras hasta el agua. Los acantilados se ponen dorados y es la mejor foto del viaje.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>Parar en Mértola, un pueblo colgado sobre el Guadiana (suma más o menos una hora)</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d20">
+      <div class="rail"><span class="date">20 oct</span><span class="dow">Martes</span><span class="base">Lagos</span></div>
+      <div class="body">
+        <h3>Benagil</h3>
+        <p><strong>Lo principal.</strong> Tour en barco a la Cueva de Benagil desde Portimão, Carvoeiro o Benagil mismo. <strong>Las reglas de acceso a la cueva cambian cada temporada</strong>: al reservar, pregunten explícitamente si entran o solo pasan por delante. El mar está entre 20 y 21 °C: se nada, pero fresco.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>La Praia da Marinha, de las más bonitas del Algarve</li>
+          <li>El sendero de los Siete Valles Colgantes, que sale de Marinha y pasa por encima de Benagil</li>
+          <li>Algar Seco, en Carvoeiro</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d21">
+      <div class="rail"><span class="date">21 oct</span><span class="dow">Miércoles</span><span class="base">Lagos</span></div>
+      <div class="body">
+        <h3>Sagres y el fin del mundo</h3>
+        <p><strong>Lo principal.</strong> La fortaleza de Sagres y el Cabo de São Vicente al atardecer, que durante siglos fue literalmente el borde del mundo conocido. Cena de mariscos de vuelta en Lagos.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>Praia do Amado o Praia da Bordeira, si quieren costa atlántica brava en lugar de postal</li>
+        </ul></div>
+        <p class="swap"><b>Dejen todo listo esta noche:</b> mañana hay que salir de Lagos a las 9:15.</p>
+      </div>
+    </article>
+
+    <article class="day" id="d22">
+      <div class="rail"><span class="date">22 oct</span><span class="dow">Jueves</span><span class="base">Madrid</span></div>
+      <div class="body">
+        <h3>Lagos → Faro y vuelo a Madrid</h3>
+        <div class="chips"><span class="chip">Salir de Lagos 9:15</span><span class="chip fly">FR220 · 12:50 → Madrid 15:10</span><span class="chip drive">Devolver el carro en Faro · 10:00</span></div>
+        <p><strong>Lo principal.</strong> Ryanair pide estar en el aeropuerto dos horas antes, y de Lagos a Faro es una hora más el tiempo de devolver el carro en el mostrador de Hertz (10:00): salgan de Lagos a las 9:15. Esta mañana es de carretera, no de playa.</p>
+        <p><strong>Llegan a Madrid a las 15:10</strong>, porque Faro va una hora atrás. En el hotel hacia las 16:15, con la tarde entera libre: la Plaza Mayor, el Mercado de San Miguel y tapas en La Latina.</p>
+        <div class="extra"><span class="extra-label">Si madrugan</span><ul>
+          <li>La Praia Dona Ana al amanecer, a diez minutos del centro de Lagos, antes de salir</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d23">
+      <div class="rail"><span class="date">23 oct</span><span class="dow">Viernes</span><span class="base">Madrid</span></div>
+      <div class="body">
+        <h3>Madrid</h3>
+        <p><strong>Lo principal.</strong> El Prado temprano con entrada pagada —la gratis de 18:00 a 20:00 significa hora y media de fila— y después el Retiro con el Palacio de Cristal.</p>
+        <div class="extra"><span class="extra-label">Si les da el tiempo</span><ul>
+          <li>El Palacio Real</li>
+          <li>El Templo de Debod al atardecer, que es el mejor mirador gratis de Madrid</li>
+          <li>Chocolate con churros en San Ginés</li>
+          <li>Gran Vía y el barrio de Malasaña</li>
+        </ul></div>
+      </div>
+    </article>
+
+    <article class="day" id="d24">
+      <div class="rail"><span class="date">24 oct</span><span class="dow">Sábado</span><span class="base">Madrid</span></div>
+      <div class="body">
+        <h3>El último día, a elección</h3>
+        <p><strong>Lo principal: nada obligatorio.</strong> Es el único día del viaje sin nada encima, y lo pueden gastar de dos maneras.</p>
+        <p><strong>Toledo</strong>, a 33 minutos en tren AVANT desde Atocha: la catedral, el Entierro del Conde de Orgaz en Santo Tomé y el mirador del Valle al atardecer, con la ciudad entera enfrente. Vuelven a Madrid a dormir.</p>
+        <p><strong>O Madrid sin plan:</strong> el Reina Sofía por el Guernica, un almuerzo largo y caminar Malasaña y Chueca sin mirar el reloj.</p>
+        <p class="swap"><b>Última noche del viaje:</b> reserven algo bueno.</p>
+      </div>
+    </article>
+
+    <article class="day" id="d25">
+      <div class="rail"><span class="date">25 oct</span><span class="dow">Domingo</span><span class="base">Vuelo</span></div>
+      <div class="body">
+        <h3>Regreso</h3>
+        <div class="chips"><span class="chip">AV17 · 15:25 · estar en el aeropuerto a las 12:15</span></div>
+        <p>Avianca opera desde la T1; confirmen la terminal en el pase de abordar. Desde el centro, metro línea 8 o el bus Exprés Aeropuerto, 30 a 40 minutos.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2>Dónde duermen</h2>
+  <p class="lede">Las siete estadías, noche por noche. Cada dirección abre en Google Maps.</p>
+  <div class="scroller">
+    <table>
+      <thead>
+        <tr><th>Noches</th><th>Ciudad</th><th>Alojamiento</th><th>Dirección</th><th>Reserva</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">10–11 oct</td><td>Oporto</td><td><strong>Loureiro Villas</strong></td><td><a href="https://www.google.com/maps/search/?api=1&query=Rua%20do%20Loureiro%2047%2C%204000-320%20Porto" target="_blank" rel="noopener">Rua do Loureiro 47–49, 4000-320 Porto, junto a São Bento</a></td><td>Booking</td></tr>
+        <tr><td class="num">12 oct</td><td>Fátima</td><td><strong>Hotel Recinto</strong></td><td><a href="https://www.google.com/maps/search/?api=1&query=Hotel%20Recinto%2C%20Rua%20de%20Santa%20Ana%20147%2C%20F%C3%A1tima" target="_blank" rel="noopener">Rua de Santa Ana 147, a 50 m del santuario</a></td><td>Booking</td></tr>
+        <tr><td class="num">13 oct</td><td>Óbidos</td><td><strong>Lovin Book Guesthouse</strong></td><td><a href="https://www.google.com/maps/search/?api=1&query=Rua%20Direita%2012%2C%20%C3%93bidos" target="_blank" rel="noopener">Rua Direita 12, junto a la Porta da Vila</a></td><td>Hotels.com</td></tr>
+        <tr><td class="num">14–17 oct</td><td>Lisboa</td><td><strong>GS Chiado Boutique Studios &amp; Suites</strong></td><td><a href="https://www.google.com/maps/search/?api=1&query=Rua%20Ivens%2049%2C%201200-226%20Lisboa" target="_blank" rel="noopener">Rua Ivens 49, 3.º esq., 1200-226 Lisboa</a></td><td>Booking de María</td></tr>
+        <tr><td class="num">18 oct</td><td>Évora</td><td><strong>Casa Soure Suites &amp; Apartments</strong></td><td><a href="https://www.google.com/maps/search/?api=1&query=Rua%20da%20Miseric%C3%B3rdia%209%2C%207000-654%20%C3%89vora" target="_blank" rel="noopener">Rua da Misericórdia 9, 7000-654 Évora</a></td><td>Booking</td></tr>
+        <tr><td class="num">19–21 oct</td><td>Lagos</td><td><strong>Bowen, Luxury Suites</strong></td><td><a href="https://www.google.com/maps/search/?api=1&query=Rua%20da%20Amendoeira%2047%2C%208600-685%20Lagos" target="_blank" rel="noopener">Rua da Amendoeira 47, 8600-685 Lagos</a></td><td>Booking</td></tr>
+        <tr><td class="num">22–24 oct</td><td>Madrid</td><td><strong>Duke Host</strong></td><td><span class="pend">Dirección pendiente</span></td><td>Airbnb</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Parqueadero en Lisboa</h2>
+  <p class="lede"><strong>Telpark Camões, Praça Luís de Camões, 1200-243 Lisboa.</strong> Del 14 al 18 de octubre, pagado (€83,10). Subterráneo, con entradas y salidas ilimitadas. Queda a 6 minutos caminando del hotel: <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Pra%C3%A7a%20Lu%C3%ADs%20de%20Cam%C3%B5es%2C%201200-243%20Lisboa&amp;destination=Rua%20Ivens%2049%2C%201200-226%20Lisboa&amp;travelmode=walking" target="_blank" rel="noopener">ver la ruta a pie</a>.</p>
+  <div class="extra"><span class="extra-label">Cómo usar el parqueadero — código T100660853</span><ol>
+    <li><strong>10 u 11 oct, con el carro ya recogido:</strong> abrir la app de Telpark (búsquenla como «Telpark» en la tienda del celular), entrar con la cuenta <strong>aroldanp@hotmail.com</strong>, tocar la reserva activa y cambiar la matrícula <strong>63-AX-53</strong> por la placa del Nissan. Se puede hasta 1 h antes del inicio.</li>
+    <li><strong>14 oct, llegada:</strong> primero al hotel (Rua Ivens 49) a dejar a María y las maletas. Luego al parqueadero: <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Rua%20Ivens%2049%2C%201200-226%20Lisboa&amp;destination=Pra%C3%A7a%20Lu%C3%ADs%20de%20Cam%C3%B5es%2C%201200-243%20Lisboa&amp;travelmode=driving" target="_blank" rel="noopener">ruta en carro del hotel a Camões</a>. La barrera lee la placa y abre sola. Se puede entrar desde las 9:00 (2 h de cortesía).</li>
+    <li><strong>Si la barrera no abre:</strong> intercomunicador de la entrada, dar el código <strong>T100660853</strong>.</li>
+    <li><strong>15 a 17 oct:</strong> entradas y salidas ilimitadas. Se garantiza cupo, no un puesto fijo: al volver, parquear donde haya.</li>
+    <li><strong>18 oct, salida:</strong> antes de la 1:00 p. m. (reserva hasta las 11:00 + 2 h de cortesía). Después cobran tarifa normal.</li>
+    <li><strong>Cancelar</strong> (solo si cambia el plan): correo a cancelacionreservas@telpark.com con el código, hasta 24 h antes del 14.</li>
+  </ol></div>
+</section>
+
+<section>
+  <h2>Códigos y comprobantes</h2>
+  <p class="lede">Lo que ya está comprado, con el código que piden en el mostrador. Los PDF están en la carpeta Descargas de Juan.</p>
+  <div class="scroller">
+    <table>
+      <thead>
+        <tr><th>Fecha</th><th>Qué</th><th>Detalle</th><th>Código</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">10 oct</td><td><strong>Vuelo Madrid → Oporto</strong></td><td>Air Europa UX1141, T2 Barajas 19:05 → Oporto 19:20. Una maleta de 23 kg cada uno incluida. No reembolsable.</td><td>Reserva <strong>7ZRZSS</strong> · tiquetes 996 2428686614 (Juan Pablo), 996 2428686615 (María Isabel)</td></tr>
+        <tr><td class="num">11 oct</td><td><strong>Livraria Lello, 13:00</strong></td><td>Rua das Carmelitas 144, Oporto. 2 entradas adulto (€15,95 c/u, descontables de un libro). Sin maletas ni morrales grandes.</td><td>Ref. <strong>107151032</strong> · tickets 317346191 y 317346192</td></tr>
+        <tr><td class="num">10–22 oct</td><td><strong>Carro: Nissan Juke, Dollar</strong></td><td>Recogida sáb 10 oct 20:30, Aeropuerto de Oporto, oficina de <strong>Hertz</strong>. Devolución jue 22 oct 10:00, Aeropuerto de Faro. Manual, 5 puestos, <strong>2 maletas grandes</strong>. Conductor principal: <strong>Juan Pablo</strong> (la tarjeta de crédito del depósito debe ser de él). Pagado: COP 725.332. En el mostrador: €196,80 por devolver en otra ciudad + €21,77 de la tarjeta de peajes = <strong>€218,57</strong>.</td><td>Confirmación <strong>757793603</strong> · Dollar +351 210 413 333</td></tr>
+        <tr><td class="num">10–22 oct</td><td><strong>Seguro RentalCover Full Protection</strong></td><td>Cubre la franquicia completa, sin tasa de reclamación y con conductores extra incluidos. Se paga primero y se reclama después en rentalcover.com/es/claim. A nombre de Juan Pablo. US$152,83 (COP 498.281).</td><td>Póliza <strong>NV43-H4DJ-INS</strong></td></tr>
+        <tr><td class="num">14–18 oct</td><td><strong>Parqueadero Telpark Lisboa – Camões</strong></td><td>Praça Luís de Camões, 1200-243 Lisboa. Entrada 14/10 11:00, salida 18/10 11:00, con 2 h de cortesía antes y después. Entradas y salidas ilimitadas. €83,10 pagados por Álvaro (cuenta aroldanp@hotmail.com). <strong>Matrícula registrada 63-AX-53: cambiarla por la del carro alquilado en la app de Telpark el 10 u 11 oct</strong> (hasta 1 h antes del inicio). Cancelar: cancelacionreservas@telpark.com, hasta 24 h antes.</td><td>Código <strong>T100660853</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Lo que falta</h2>
+  <p class="lede">Todo lo grande ya está comprado. Esto es lo que queda por hacer o confirmar, de lo más urgente a lo opcional.</p>
+  <div class="book">
+    <div class="item"><span class="pri p1">Falta</span><span class="what">Cancelar la reserva vieja del carro y su seguro</span><span class="why">La reserva buena es la 757793603, a nombre de Juan. Cancelen la anterior, 793041767 (a nombre de María, en Booking, gratis hasta 48 h antes), y la póliza RentalCover GFDQ-S5D5-INS en rentalcover.com. Si ya lo hicieron, confirmen que llegó el correo de cancelación y el reembolso.</span></div>
+    <div class="item"><span class="pri p1">Confirmar</span><span class="what">Dónde dejar el carro en Oporto, noches del 10 y 11</span><span class="why">Escríbanle al Loureiro Villas: si tiene garaje, dirección, precio por noche y si el cupo queda garantizado. Llegan con el carro hacia las 21:00 del 10.</span></div>
+    <div class="item"><span class="pri p2">Falta</span><span class="what">Cambiar la placa en Telpark, 10 u 11 oct</span><span class="why">App de Telpark, cuenta aroldanp@hotmail.com, reserva T100660853: cambiar 63-AX-53 por la placa del Nissan. Detalle en la sección del parqueadero.</span></div>
+    <div class="item"><span class="pri p2">Falta</span><span class="what">Tour en barco a Benagil, 20 oct por la mañana</span><span class="why">Reserven uno con cancelación gratuita hasta 24 horas antes y cancelen si el pronóstico del 19 no es bueno. Que salga de Carvoeiro o Portimão, en grupo pequeño, y pregunten si el barco entra a la cueva.</span></div>
+    <div class="item"><span class="pri p2">Confirmar</span><span class="what">Parqueo en Évora y Lagos</span><span class="why">Pregúntenle a Casa Soure (Évora) y a Bowen (Lagos) dónde dejar el carro: los dos están en centros históricos.</span></div>
+    <div class="item"><span class="pri p2">Confirmar</span><span class="what">Fecha límite de la cancelación gratuita de cada hotel</span><span class="why">Anótenla en el Excel.</span></div>
+    <div class="item"><span class="pri p3">Opcional</span><span class="what">Biblioteca Joanina, Coimbra, 13 oct 16:30</span><span class="why">Solo si deciden desviarse a Coimbra ese día. Se compra en visit.uc.pt y solo se admite en la franja del ticket.</span></div>
+    <div class="item"><span class="pri p3">Opcional</span><span class="what">Entradas del Castelo de São Jorge y los Jerónimos</span><span class="why">Compradas online se evitan la fila, sobre todo el sábado 17 en Belém.</span></div>
+    <div class="item"><span class="pri p3">Opcional</span><span class="what">Permiso internacional de conducción</span><span class="why">Dollar no lo pide con licencia colombiana. Solo sirve por si los para la policía; sáquenlo si quieren ir tranquilos.</span></div>
+    <div class="item"><span class="pri p3">Revisar</span><span class="what">ETIAS, la semana antes de viajar</span><span class="why">Aún no está operativo; miren la web oficial de la UE por si cambia.</span></div>
+    <div class="item"><span class="pri p0">Listo</span><span class="what">Vuelos, hoteles, carro, parqueadero y entradas</span><span class="why">AV16, Air Europa UX1141 del 10, Ryanair FR220 del 22 (con las dos maletas de 20 kg pagadas) y AV17. Los siete alojamientos. Carro Dollar Oporto → Faro con seguro RentalCover. Parqueadero Camões en Lisboa. Livraria Lello, 11 oct 13:00. Pena, 16 oct 10:30. Mesa de Frades, 15 oct 21:30, €140 ya pagados.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Notas prácticas</h2>
+  <div class="notes">
+    <div class="note">
+      <h4>Peajes en Portugal</h4>
+      <p>Son electrónicos, sin caseta. La tarjeta de peajes ya viene en la reserva del carro (€21,77, se paga en el mostrador); los peajes que usen se cobran aparte a la tarjeta.</p>
+    </div>
+    <div class="note">
+      <h4>Licencia de conducción</h4>
+      <p>Dollar acepta la licencia colombiana; el permiso internacional solo lo exige para licencias en otro alfabeto. Tiene que tener al menos 2 años de expedida, y se presenta la física, no la digital.</p>
+    </div>
+    <div class="note">
+      <h4>Tarjeta para el depósito</h4>
+      <p>De crédito, a nombre del conductor principal, con chip y clave, y habilitada para compras en el exterior. Bloquean <strong>€900</strong> de depósito hasta devolver el carro. No aceptan tarjetas de bancos digitales.</p>
+    </div>
+    <div class="note">
+      <h4>ETIAS y control biométrico</h4>
+      <p>ETIAS todavía no está operativo; la UE lo proyecta para el último trimestre de 2026 con seis meses de periodo de gracia, así que probablemente no lo necesiten. Revísenlo igual a finales de septiembre. Lo que sí está activo es el registro biométrico de entrada: las filas de inmigración en Barajas están lentas.</p>
+    </div>
+    <div class="note">
+      <h4>Clima en octubre</h4>
+      <p>Oporto 20 °C con lluvia probable, Lisboa 22 °C, Algarve 23 °C con el mar entre 20 y 21 °C, Madrid 20 °C y fresco de noche. Lleven chaqueta impermeable liviana: en Fátima son muchas horas a la intemperie.</p>
+    </div>
+    <div class="note">
+      <h4>Si el carro sufre un daño</h4>
+      <p>Tomen fotos y pidan el reporte en el mostrador. Dollar cobra la reparación a la tarjeta; después se reclama a RentalCover (póliza NV43-H4DJ-INS) en rentalcover.com/es/claim con las fotos, el contrato y el recibo.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Presupuesto aproximado</h2>
+  <p class="lede">Para los dos, sin contar los vuelos Medellín–Madrid que ya tienen.</p>
+  <table class="budget">
+    <tbody>
+      <tr><td>Alojamiento, 15 noches (€100–160 por noche)</td><td>€1.500 – 2.400</td></tr>
+      <tr><td>Vuelos internos (MAD→OPO, FAO→MAD)</td><td>€160 – 300</td></tr>
+      <tr><td>Carro 12 días, seguro, parqueadero en Lisboa, gasolina y peajes</td><td>€750 – 850</td></tr>
+      <tr><td>Entradas, tours y catas</td><td>€350 – 550</td></tr>
+      <tr><td>Comida (€75–100 al día, los dos)</td><td>€1.125 – 1.500</td></tr>
+      <tr><td>Transporte urbano y trenes cortos</td><td>€150</td></tr>
+      <tr><td>Total</td><td>€4.035 – 5.750</td></tr>
+    </tbody>
+  </table>
+  <p class="caveat">El carro ya está pagado: unos €580 entre alquiler, seguro, cargos del mostrador y parqueadero. El resto son estimados.</p>
+</section>
+
+
+<footer>
+  <p>Preparado el 11 de septiembre de 2026, sobre el AV16 que sale de Medellín el 9 y aterriza en Madrid el 10 a las 15:20, y el AV17 que sale de Madrid el 25 a las 15:25. Horarios del Santuario de Fátima según el programa de la peregrinación del 12 y 13 de octubre; el resto son estimados que conviene confirmar al reservar.</p>
+</footer>
+
+</div>
