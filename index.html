@@ -407,6 +407,29 @@
   .wear-legend>span{display:inline-flex;align-items:center;gap:.3rem}
   .wear-legend .wear-ic{margin:0;color:var(--ink-3)}
   .wear-legend .wear-ic svg{width:18px;height:18px}
+
+  .jump{position:sticky;top:0;z-index:20;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;
+    margin:0 calc(-1*clamp(1rem,4vw,2.5rem));padding:.6rem clamp(1rem,4vw,2.5rem);
+    background:var(--ground);border-bottom:1px solid var(--line)}
+  .jump::-webkit-scrollbar{display:none}
+  .jump a{flex:none;padding:.3rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--surface);
+    color:var(--ink-2);font-size:.85rem;font-weight:500;text-decoration:none;white-space:nowrap}
+  .jump a:hover{border-color:var(--blue-2);color:var(--blue)}
+  .jump a.hoy{background:var(--blue);border-color:var(--blue);color:var(--surface)}
+  section{scroll-margin-top:3.2rem}
+  .day{scroll-margin-top:3.6rem}
+  details.fold{border:0;padding:0}
+  details.fold>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-weight:inherit;list-style:none}
+  details.fold>summary::before{content:none}
+  details.fold>summary h2{margin:0}
+  details.fold>summary::after{content:"";flex:none;width:.7rem;height:.7rem;margin-right:.3rem;
+    border-right:2px solid var(--ink-3);border-bottom:2px solid var(--ink-3);transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+  details.fold[open]>summary::after{transform:rotate(-135deg) translate(-2px,-2px)}
+  details.fold[open]>summary{margin-bottom:.5rem}
+  details.fold:not([open])>summary h2{font-size:clamp(1.25rem,3vw,1.5rem);color:var(--ink-2)}
+  details.fold p{font-size:inherit;color:inherit;margin:revert}
+  details.fold .lede{color:var(--ink-2);margin:0 0 1.75rem}
+  section:has(details.fold:not([open])){padding-top:1.1rem}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -424,8 +447,21 @@
   </dl>
 </header>
 
-<section>
-  <h2>Las quince noches, día a día</h2>
+<nav class="jump" aria-label="Ir a">
+  <a href="#dias" id="hoy" class="hoy">Hoy</a>
+  <a href="#agenda">Días</a>
+  <a href="#falta">Falta</a>
+  <a href="#wear">Ropa</a>
+  <a href="#codigos">Códigos</a>
+  <a href="#parqueo">Parqueo</a>
+  <a href="#hoteles">Hoteles</a>
+  <a href="#mapa">Mapa</a>
+  <a href="#notas">Notas</a>
+</nav>
+
+<section id="agenda">
+<details class="fold" open>
+  <summary><h2>Las quince noches, día a día</h2></summary>
   <p class="lede">Una fila por fecha: dónde pasan el día, si ese día manejan, y dónde duermen esa noche. El carro lo tienen del 10 en la noche al 22 en la mañana. Toquen una fila para ir al detalle de ese día.</p>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"/></symbol>
@@ -454,10 +490,12 @@
     <a class="ag-row newbase" href="#d25"><span class="ag-date"><b>25</b>dom</span><span class="ag-day ag-move"><svg class="ag-ic"><use href="#i-plane"></use></svg><span>Madrid → vuelo de regreso 15:25</span></span><span class="ag-car"></span><span class="ag-night n-avion"><svg class="ag-ic"><use href="#i-plane"></use></svg>En el avión</span></a>
   </div>
   <p class="caveat">Oporto 2 noches, Fátima 1, Óbidos 1, Lisboa 4, Évora 1, Lagos 3 y Madrid 3. Las filas con flecha o avión son días de traslado; el ícono del carro marca los días que manejan. Aquí va solo lo principal de cada día; lo opcional está en el detalle.</p>
+</details>
 </section>
 
-<section>
-  <h2>El mapa de la ruta</h2>
+<section id="mapa">
+<details class="fold">
+  <summary><h2>El mapa de la ruta</h2></summary>
   <p class="lede">A escala real. El tamaño de cada punto es el número de noches; toquen un punto para saltar a ese día.</p>
 
   <div class="mapwrap">
@@ -547,10 +585,12 @@
     </table>
   </div>
   <p class="caveat">Unos 1.050 km al volante en doce días, sin contar las paradas opcionales, y el día más largo no llega a tres horas.</p>
+</details>
 </section>
 
-<section>
-  <h2>El itinerario, día por día</h2>
+<section id="dias">
+<details class="fold" open>
+  <summary><h2>El itinerario, día por día</h2></summary>
   <p class="lede">Norte a sur, sin devolverse. Los dos días en rojo son los únicos que no se pueden mover. Cada día trae primero lo principal; lo del recuadro punteado es opcional, para si les da el tiempo y las ganas.</p>
 
   <div class="days">
@@ -771,10 +811,12 @@
     </article>
 
   </div>
+</details>
 </section>
 
 <section id="wear">
-  <h2>Qué ponerse, día por día</h2>
+<details class="fold">
+  <summary><h2>Qué ponerse, día por día</h2></summary>
   <p class="lede">Día y noche usan casi la misma ropa: en la tarde se agrega una capa, porque baja 7 a 10 grados. Solo dos noches piden algo más arreglado (fado el 15 y última cena el 24), y sirve el mismo conjunto. Los zapatos son lo más importante: tenis con suela que agarre, porque la piedra de Lisboa y Oporto resbala.</p>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="w-tee" viewBox="0 0 24 24"><path d="M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3c-1 2-7 2-8 0z"/></symbol>
@@ -820,10 +862,12 @@
     <li>Caben 2 maletas grandes en el carro y Ryanair permite 20 kg por maleta: una mediana por persona alcanza</li>
   </ul></div>
   <p class="wear-legend"><span><span class="wear-ic"><svg role="img" aria-label="Camiseta"><title>Camiseta</title><use href="#w-tee"></use></svg></span>Camiseta</span><span><span class="wear-ic"><svg role="img" aria-label="Manga larga"><title>Manga larga</title><use href="#w-manga"></use></svg></span>Manga larga</span><span><span class="wear-ic"><svg role="img" aria-label="Saco o suéter"><title>Saco o suéter</title><use href="#w-saco"></use></svg></span>Saco o suéter</span><span><span class="wear-ic"><svg role="img" aria-label="Chaqueta impermeable"><title>Chaqueta impermeable</title><use href="#w-chaqueta"></use></svg></span>Chaqueta impermeable</span><span><span class="wear-ic"><svg role="img" aria-label="Camisa de botones"><title>Camisa de botones</title><use href="#w-camisa"></use></svg></span>Camisa de botones</span><span><span class="wear-ic"><svg role="img" aria-label="Vestido o falda"><title>Vestido o falda</title><use href="#w-vestido"></use></svg></span>Vestido o falda</span><span><span class="wear-ic"><svg role="img" aria-label="Pantalón o jean"><title>Pantalón o jean</title><use href="#w-pantalon"></use></svg></span>Pantalón o jean</span><span><span class="wear-ic"><svg role="img" aria-label="Tenis con agarre"><title>Tenis con agarre</title><use href="#w-tenis"></use></svg></span>Tenis con agarre</span><span><span class="wear-ic"><svg role="img" aria-label="Sandalias"><title>Sandalias</title><use href="#w-sandalias"></use></svg></span>Sandalias</span><span><span class="wear-ic"><svg role="img" aria-label="Bufanda"><title>Bufanda</title><use href="#w-bufanda"></use></svg></span>Bufanda</span><span><span class="wear-ic"><svg role="img" aria-label="Poncho o sombrilla"><title>Poncho o sombrilla</title><use href="#w-poncho"></use></svg></span>Poncho o sombrilla</span><span><span class="wear-ic"><svg role="img" aria-label="Vestido de baño"><title>Vestido de baño</title><use href="#w-bano"></use></svg></span>Vestido de baño</span><span><span class="wear-ic"><svg role="img" aria-label="Gafas de sol"><title>Gafas de sol</title><use href="#w-gafas"></use></svg></span>Gafas de sol</span><span><span class="wear-ic"><svg role="img" aria-label="Gorra"><title>Gorra</title><use href="#w-gorra"></use></svg></span>Gorra</span></p>
+</details>
 </section>
 
-<section>
-  <h2>Dónde duermen</h2>
+<section id="hoteles">
+<details class="fold">
+  <summary><h2>Dónde duermen</h2></summary>
   <p class="lede">Las siete estadías, noche por noche. Cada dirección abre en Google Maps.</p>
   <div class="scroller">
     <table>
@@ -841,10 +885,12 @@
       </tbody>
     </table>
   </div>
+</details>
 </section>
 
-<section>
-  <h2>Parqueadero en Lisboa</h2>
+<section id="parqueo">
+<details class="fold">
+  <summary><h2>Parqueadero en Lisboa</h2></summary>
   <p class="lede"><strong>Telpark Camões, Praça Luís de Camões, 1200-243 Lisboa.</strong> Del 14 al 18 de octubre, pagado (€83,10). Subterráneo, con entradas y salidas ilimitadas. Queda a 6 minutos caminando del hotel: <a href="https://www.google.com/maps/dir/?api=1&amp;origin=Pra%C3%A7a%20Lu%C3%ADs%20de%20Cam%C3%B5es%2C%201200-243%20Lisboa&amp;destination=Rua%20Ivens%2049%2C%201200-226%20Lisboa&amp;travelmode=walking" target="_blank" rel="noopener">ver la ruta a pie</a>.</p>
   <div class="extra"><span class="extra-label">Cómo usar el parqueadero — código T100660853</span><ol>
     <li><strong>10 u 11 oct, con el carro ya recogido:</strong> abrir la app de Telpark (búsquenla como «Telpark» en la tienda del celular), entrar con la cuenta de Álvaro, <strong>aroldanp@hotmail.com</strong> (la reserva está ahí, no en la cuenta juan@groundgamesales.com), tocar la reserva activa y cambiar la matrícula <strong>63-AX-53</strong> por la placa del Nissan. Se puede hasta 1 h antes del inicio. Desde Portugal la app funciona sin VPN; desde Colombia hay que usar VPN.</li>
@@ -854,10 +900,12 @@
     <li><strong>18 oct, salida:</strong> antes de la 1:00 p. m. (reserva hasta las 11:00 + 2 h de cortesía). Después cobran tarifa normal.</li>
     <li><strong>Cancelar</strong> (solo si cambia el plan): correo a cancelacionreservas@telpark.com con el código, hasta 24 h antes del 14.</li>
   </ol></div>
+</details>
 </section>
 
-<section>
-  <h2>Códigos y comprobantes</h2>
+<section id="codigos">
+<details class="fold">
+  <summary><h2>Códigos y comprobantes</h2></summary>
   <p class="lede">Lo que ya está comprado, con el código que piden en el mostrador. Los PDF están en la carpeta Descargas de Juan.</p>
   <div class="scroller">
     <table>
@@ -873,10 +921,12 @@
       </tbody>
     </table>
   </div>
+</details>
 </section>
 
-<section>
-  <h2>Lo que falta</h2>
+<section id="falta">
+<details class="fold" open>
+  <summary><h2>Lo que falta</h2></summary>
   <p class="lede">Todo lo grande ya está comprado. Esto es lo que queda por hacer o confirmar, de lo más urgente a lo opcional.</p>
   <div class="book">
     <div class="item"><span class="pri p1">Confirmar</span><span class="what">Dónde dejar el carro en Oporto, noches del 10 y 11</span><span class="why">Escríbanle al Loureiro Villas: si tiene garaje, dirección, precio por noche y si el cupo queda garantizado. Llegan con el carro hacia las 21:00 del 10.</span></div>
@@ -890,10 +940,12 @@
     <div class="item"><span class="pri p3">Revisar</span><span class="what">ETIAS, la semana antes de viajar</span><span class="why">Aún no está operativo; miren la web oficial de la UE por si cambia.</span></div>
     <div class="item"><span class="pri p0">Listo</span><span class="what">Vuelos, hoteles, carro, parqueadero y entradas</span><span class="why">AV16, Air Europa UX1141 del 10, Ryanair FR220 del 22 (con las dos maletas de 20 kg pagadas) y AV17. Los siete alojamientos. Carro Dollar Oporto → Faro con seguro RentalCover. Parqueadero Camões en Lisboa. Livraria Lello, 11 oct 13:00. Pena, 16 oct 10:30. Mesa de Frades, 15 oct 21:30, €140 ya pagados.</span></div>
   </div>
+</details>
 </section>
 
-<section>
-  <h2>Notas prácticas</h2>
+<section id="notas">
+<details class="fold">
+  <summary><h2>Notas prácticas</h2></summary>
   <div class="notes">
     <div class="note">
       <h4>Peajes en Portugal</h4>
@@ -920,10 +972,12 @@
       <p>Tomen fotos y pidan el reporte en el mostrador. Dollar cobra la reparación a la tarjeta; después se reclama a RentalCover (póliza NV43-H4DJ-INS) en rentalcover.com/es/claim con las fotos, el contrato y el recibo.</p>
     </div>
   </div>
+</details>
 </section>
 
-<section>
-  <h2>Presupuesto aproximado</h2>
+<section id="presupuesto">
+<details class="fold">
+  <summary><h2>Presupuesto aproximado</h2></summary>
   <p class="lede">Para los dos, sin contar los vuelos Medellín–Madrid que ya tienen.</p>
   <table class="budget">
     <tbody>
@@ -937,6 +991,7 @@
     </tbody>
   </table>
   <p class="caveat">El carro ya está pagado: unos €580 entre alquiler, seguro, cargos del mostrador y parqueadero. El resto son estimados.</p>
+</details>
 </section>
 
 
@@ -945,3 +1000,20 @@
 </footer>
 
 </div>
+<script>
+(function(){
+  function openTo(id){
+    var t=document.getElementById(id); if(!t) return;
+    var d=t.closest('details')||t.querySelector('details.fold'); if(d) d.open=true;
+    if(t.tagName==='SECTION'){var f=t.querySelector('details.fold'); if(f) f.open=true;}
+  }
+  // "Hoy": dia actual del viaje (10-25 oct 2026), si no el primer dia
+  var n=new Date(), d=10;
+  if(n.getFullYear()===2026 && n.getMonth()===9 && n.getDate()>=10 && n.getDate()<=25) d=n.getDate();
+  var hoy=document.getElementById('hoy'); hoy.href='#d'+d;
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(){ openTo(a.getAttribute('href').slice(1)); });
+  });
+  if(location.hash) openTo(location.hash.slice(1));
+})();
+</script>
