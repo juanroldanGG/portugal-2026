@@ -475,6 +475,19 @@
   details.fold p{font-size:inherit;color:inherit;margin:revert}
   details.fold .lede{color:var(--ink-2);margin:0 0 1.75rem}
   section:has(details.fold:not([open])){padding-top:1.1rem}
+
+  .am{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .am li{display:grid;grid-template-columns:5.2rem minmax(0,1fr);gap:.6rem;padding:.65rem 0;border-bottom:1px solid var(--line)}
+  .am-date{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--ink-3);padding-top:.15rem}
+  .am-body{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .6rem;font-size:.92rem}
+  .am-body strong{color:var(--ink)}
+  .am-kind{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+  .am-addr{flex-basis:100%;color:var(--blue);text-decoration:none}
+  .am-addr.pend{color:var(--ink-3)}
+  .am-code{display:inline-flex;gap:.35rem;align-items:baseline;padding:.12rem .5rem;border-radius:4px;background:var(--ochre-wash);color:var(--ochre)}
+  .am-code b{font-family:'IBM Plex Mono',monospace;font-size:.95rem;user-select:all}
+  .am-code small{font-size:.72rem}
+  .am-tel{color:var(--green);text-decoration:none;font-weight:500}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -494,6 +507,7 @@
 
 <nav class="jump" aria-label="Ir a">
   <a href="#dias" id="hoy" class="hoy">Hoy</a>
+  <a href="#amano">A mano</a>
   <a href="#agenda">Días</a>
   <a href="#falta">Falta</a>
   <a href="#wear">Ropa</a>
@@ -503,6 +517,37 @@
   <a href="#mapa">Mapa</a>
   <a href="#notas">Notas</a>
 </nav>
+
+<section id="amano">
+<details class="fold" open>
+  <summary><h2>A mano: direcciones y códigos</h2></summary>
+  <p class="lede">Todo lo que se necesita mostrar o buscar, en orden de fechas. Toquen una dirección para abrirla en Google Maps y un teléfono para llamar.</p>
+  <ul class="am">
+    <li><span class="am-date">10 oct</span><div class="am-body"><span class="am-kind">Vuelo</span> <strong>Air Europa UX1141 · Madrid T2 19:05 → Oporto 19:20</strong><span class="am-code"><small>Reserva</small> <b>7ZRZSS</b></span></div></li>
+    <li><span class="am-date">10 oct</span><div class="am-body"><span class="am-kind">Carro</span> <strong>Hertz (reservado por Booking como Dollar) · recogida 20:30, mostrador en llegadas</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Hertz%20Porto%20Airport" target="_blank" rel="noopener">📍 Aeropuerto Francisco Sá Carneiro, Oporto</a><span class="am-code"><small>Hertz</small> <b>L721EAF0662</b></span><span class="am-code"><small>Booking</small> <b>757793603</b></span><a class="am-tel" href="tel:+351219426300">☎ +351 219 426 300</a></div></li>
+    <li><span class="am-date">10–11 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>Loureiro Villas</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Loureiro%20Villas%2C%20Rua%20do%20Loureiro%2047%2C%204000-320%20Porto" target="_blank" rel="noopener">📍 Rua do Loureiro 47–49, 4000-320 Porto</a></div></li>
+    <li><span class="am-date">10–12 oct</span><div class="am-body"><span class="am-kind">Parqueadero</span> <strong>Telpark Porto – D. João I · 10/10 20:00 → 12/10 20:00</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20D.%20Jo%C3%A3o%20I%2013%2C%204000-295%20Porto" target="_blank" rel="noopener">📍 Praça D. João I 13, 4000-295 Porto</a><span class="am-code"><small>Código</small> <b>T100671900</b></span></div></li>
+    <li><span class="am-date">11 oct</span><div class="am-body"><span class="am-kind">Entrada</span> <strong>Livraria Lello · 13:00</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Livraria%20Lello%2C%20Rua%20das%20Carmelitas%20144%2C%20Porto" target="_blank" rel="noopener">📍 Rua das Carmelitas 144, Porto</a><span class="am-code"><small>Ref.</small> <b>107151032</b></span></div></li>
+    <li><span class="am-date">12 oct</span><div class="am-body"><span class="am-kind">Tour</span> <strong>Free walking tour Sandeman · 11:00, sombrillas rojas</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Torre%20dos%20Cl%C3%A9rigos%2C%20Porto" target="_blank" rel="noopener">📍 Estatua frente a la Torre dos Clérigos</a></div></li>
+    <li><span class="am-date">12 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>Hotel Recinto</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Hotel%20Recinto%2C%20Rua%20de%20Santa%20Ana%20147%2C%20F%C3%A1tima" target="_blank" rel="noopener">📍 Rua de Santa Ana 147, Fátima</a></div></li>
+    <li><span class="am-date">13 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>Lovin Book Guesthouse · self check-in por WhatsApp</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Rua%20Direita%2012%2C%20%C3%93bidos" target="_blank" rel="noopener">📍 Rua Direita 12, Óbidos</a></div></li>
+    <li><span class="am-date">14 oct</span><div class="am-body"><span class="am-kind">Almuerzo</span> <strong>Restaurante A Canastra · solo mediodía, cierra domingos</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=A%20Canastra%2C%20Rua%20Antiga%20Estrada%20Real%2034%2C%20%C3%93bidos" target="_blank" rel="noopener">📍 Rua Antiga Estrada Real 34, Óbidos</a><a class="am-tel" href="tel:+351914436533">☎ +351 914 436 533</a></div></li>
+    <li><span class="am-date">14–17 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>GS Chiado Boutique Studios &amp; Suites</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Rua%20Ivens%2049%2C%201200-226%20Lisboa" target="_blank" rel="noopener">📍 Rua Ivens 49, 3.º esq., 1200-226 Lisboa</a></div></li>
+    <li><span class="am-date">14–18 oct</span><div class="am-body"><span class="am-kind">Parqueadero</span> <strong>Telpark Lisboa – Camões · 14/10 11:00 → 18/10 11:00</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Lu%C3%ADs%20de%20Cam%C3%B5es%2C%201200-243%20Lisboa" target="_blank" rel="noopener">📍 Praça Luís de Camões, 1200-243 Lisboa</a><span class="am-code"><small>Código</small> <b>T100671890</b></span></div></li>
+    <li><span class="am-date">15 oct</span><div class="am-body"><span class="am-kind">Cena</span> <strong>Mesa de Frades · fado 21:30, pagado</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Mesa%20de%20Frades%2C%20Rua%20dos%20Rem%C3%A9dios%20139%2C%20Lisboa" target="_blank" rel="noopener">📍 Rua dos Remédios 139, Lisboa</a></div></li>
+    <li><span class="am-date">16 oct</span><div class="am-body"><span class="am-kind">Entrada</span> <strong>Palácio da Pena · 10:30</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio%20da%20Pena%2C%20Sintra" target="_blank" rel="noopener">📍 Estrada da Pena, Sintra</a></div></li>
+    <li><span class="am-date">18 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>Casa Soure Suites &amp; Apartments</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Rua%20da%20Miseric%C3%B3rdia%209%2C%207000-654%20%C3%89vora" target="_blank" rel="noopener">📍 Rua da Misericórdia 9, 7000-654 Évora</a></div></li>
+    <li><span class="am-date">19–21 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>Bowen Luxury Suites</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Rua%20da%20Amendoeira%2047%2C%208600-685%20Lagos" target="_blank" rel="noopener">📍 Rua da Amendoeira 47, 8600-685 Lagos</a></div></li>
+    <li><span class="am-date">22 oct</span><div class="am-body"><span class="am-kind">Carro</span> <strong>Devolver en Hertz · 10:00</strong><a class="am-addr" href="https://www.google.com/maps/search/?api=1&query=Hertz%20Faro%20Airport" target="_blank" rel="noopener">📍 Aeropuerto de Faro</a><span class="am-code"><small>Hertz</small> <b>L721EAF0662</b></span><a class="am-tel" href="tel:+351219426300">☎ +351 219 426 300</a></div></li>
+    <li><span class="am-date">22 oct</span><div class="am-body"><span class="am-kind">Vuelo</span> <strong>Ryanair FR220 · Faro 12:50 → Madrid 15:10</strong></div></li>
+    <li><span class="am-date">22–24 oct</span><div class="am-body"><span class="am-kind">Hotel</span> <strong>Duke Host (Airbnb)</strong><span class="am-addr pend">Dirección pendiente</span></div></li>
+    <li><span class="am-date">25 oct</span><div class="am-body"><span class="am-kind">Vuelo</span> <strong>Avianca AV17 · Madrid 15:25 · estar a las 12:15</strong></div></li>
+    <li><span class="am-date">Siempre</span><div class="am-body"><span class="am-kind">Seguro del carro</span> <strong>RentalCover · reclamos en rentalcover.com/claim</strong><span class="am-code"><small>Póliza</small> <b>NV43-H4DJ-INS</b></span></div></li>
+    <li><span class="am-date">Siempre</span><div class="am-body"><span class="am-kind">Asistencia médica</span> <strong>SURA · pedir autorización antes de ir a la clínica</strong><span class="am-code"><small>Certificado</small> <b>SSA-KHIK3L</b></span><a class="am-tel" href="tel:+573152757888">☎ +573 152 757 888</a></div></li>
+    <li><span class="am-date">Siempre</span><div class="am-body"><span class="am-kind">Emergencias</span> <strong>Portugal y España</strong><a class="am-tel" href="tel:112">☎ 112</a></div></li>
+  </ul>
+</details>
+</section>
 
 <section id="agenda">
 <details class="fold" open>
